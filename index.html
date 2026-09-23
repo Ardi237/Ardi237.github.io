@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ardi Okdianto | CV</title>
     <meta
       name="description"
-      content="A clean white CV starter page for Ardi Okdianto."
+      content="A clean white one-page CV with subtle left and right scroll movement."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -25,76 +25,84 @@
         </div>
       </nav>
 
-      <section class="hero">
+      <section class="hero" aria-label="Intro">
         <p class="eyebrow">Curriculum Vitae</p>
-        <h1>Clean white personal page.</h1>
+        <h1>One page, vertical flow, side motion.</h1>
         <p class="hero-text">
-          A fresh, minimal starting point. The previous portfolio source is kept
-          safely as a reference in the
-          <a href="./previous/">previous folder</a>.
+          Halaman ini tetap discroll ke bawah, tetapi setiap bagian dibuat
+          terasa bergeser ke kiri dan kanan. Source lama tetap aman di
+          <a href="./previous/">previous/</a>.
         </p>
+        <a class="scroll-cue" href="#profile" aria-label="Scroll to profile">
+          Scroll
+          <span></span>
+        </a>
       </section>
     </header>
 
-    <main>
-      <section class="section" id="profile">
-        <p class="section-label">01 / Profile</p>
-        <div class="section-content">
+    <main class="story-flow" aria-label="CV content">
+      <section class="slide-section align-left" id="profile" data-direction="left">
+        <article class="slide-panel">
+          <p class="section-label">01 / Profile</p>
           <h2>Simple introduction area.</h2>
           <p>
             Use this block for a short professional summary, focus area, and the
             type of work this CV should present.
           </p>
-        </div>
+        </article>
       </section>
 
-      <section class="section" id="work">
-        <p class="section-label">02 / Work</p>
-        <div class="section-content">
+      <section class="slide-section align-right" id="work" data-direction="right">
+        <article class="slide-panel">
+          <p class="section-label">02 / Work</p>
           <h2>Experience timeline.</h2>
           <div class="list">
-            <article>
+            <div>
               <span>Current</span>
               <p>Add your current role, responsibility, or business focus here.</p>
-            </article>
-            <article>
+            </div>
+            <div>
               <span>Previous</span>
               <p>Add earlier experience, project ownership, or achievements here.</p>
-            </article>
+            </div>
           </div>
-        </div>
+        </article>
       </section>
 
-      <section class="section" id="projects">
-        <p class="section-label">03 / Projects</p>
-        <div class="section-content">
+      <section
+        class="slide-section align-left"
+        id="projects"
+        data-direction="left"
+      >
+        <article class="slide-panel">
+          <p class="section-label">03 / Projects</p>
           <h2>Selected projects.</h2>
           <div class="cards">
-            <article class="card">
+            <div class="card">
               <h3>Project One</h3>
               <p>Short description of the project, stack, and outcome.</p>
-            </article>
-            <article class="card">
+            </div>
+            <div class="card">
               <h3>Project Two</h3>
               <p>Short description of the project, stack, and outcome.</p>
-            </article>
+            </div>
           </div>
-        </div>
+        </article>
       </section>
 
-      <section class="section" id="contact">
-        <p class="section-label">04 / Contact</p>
-        <div class="section-content">
+      <section class="slide-section align-right" id="contact" data-direction="right">
+        <article class="slide-panel">
+          <p class="section-label">04 / Contact</p>
           <h2>Contact details.</h2>
           <p>
             Add email, phone, LinkedIn, GitHub, or any preferred contact channel.
           </p>
-        </div>
+        </article>
       </section>
     </main>
 
     <footer class="footer">
-      <span>© <span data-year></span> Ardi Okdianto</span>
+      <span>&copy; <span data-year></span> Ardi Okdianto</span>
       <a href="#home">Back to top</a>
     </footer>
 
