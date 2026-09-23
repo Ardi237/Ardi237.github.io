@@ -1,234 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    <title>Ardi Okdianto | CV</title>
+    <meta
+      name="description"
+      content="A clean white CV starter page for Ardi Okdianto."
     />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Responsive Personal Portfolio Website Design</title>
   </head>
   <body>
-    <!-- HEADER SESSION -->
-    <header class="header">
-      <a href="#" class="logo">Portofolio</a>
-
-      <i class="fas fa-bars" id="menu-icon"></i>
-      <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+    <header class="site-header" id="home">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#home">Ardi Okdianto</a>
+        <button class="nav-toggle" type="button" aria-expanded="false">
+          Menu
+        </button>
+        <div class="nav-links">
+          <a class="nav-link active" href="#profile">Profile</a>
+          <a class="nav-link" href="#work">Work</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
       </nav>
+
+      <section class="hero">
+        <p class="eyebrow">Curriculum Vitae</p>
+        <h1>Clean white personal page.</h1>
+        <p class="hero-text">
+          A fresh, minimal starting point. The previous portfolio source is kept
+          safely as a reference in the
+          <a href="./previous/">previous folder</a>.
+        </p>
+      </section>
     </header>
 
-    <!-- HOME SECTION DESIGN -->
-    <section class="home" id="home">
-      <div class="home-content">
-        <h3>Hi, Myself</h3>
-        <h1>Ardi Okdianto</h1>
-        <h3>And I'm a <span class="multiple-text">Back-end Developer</span></h3>
-        <p>
-          I am Ardi Okdianto, 16 years old teenager. Have an interest in web and
-          mobile based software development. Currently learning the use of Code
-          Igniter and Flutter.
-        </p>
-        <div class="social-media">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fas fa-link"></i></a>
-        </div>
-        <a href="#" class="btn">Download CV</a>
-      </div>
-      <div class="home-img">
-        <img src="./img/profil.png" alt="" />
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION DESIGN -->
-    <section class="about" id="about">
-      <div class="about-img">
-        <img src="./img/profil.png" alt="" />
-      </div>
-
-      <div class="about-content">
-        <h2 class="heading">About <span>Me</span></h2>
-        <h3>Back-end Developer</h3>
-        <p>
-          Introducing, my name is Ardi Okdianto, a passionate and enthusiastic
-          16-year-old teenager in the world of technology. I have a deep
-          interest in software development, both web-based and mobile. This
-          interest has driven me to learn various relevant technologies and
-          frameworks. 
-          <br> 
-          Currently, I am focusing on Code Igniter, a PHP framework
-          that is very useful in building dynamic and interactive web
-          applications. In addition, I am also honing my skills in using
-          Flutter, a UI toolkit developed by Google to create beautiful and
-          high-performance mobile applications for iOS and Android.
-        </p>
-        <a href="#" class="btn">Read more</a>
-      </div>
-    </section>
-
-    <!-- SERVICES SECTION DESIGN -->
-    <section class="services" id="services">
-      <h2 class="heading">My <span>Services</span></h2>
-
-      <div class="services-container">
-        <div class="services-box">
-          <i class="fa-solid fa-code"></i>
-          <h1>Web Development</h1>
+    <main>
+      <section class="section" id="profile">
+        <p class="section-label">01 / Profile</p>
+        <div class="section-content">
+          <h2>Simple introduction area.</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            atque numquam
+            Use this block for a short professional summary, focus area, and the
+            type of work this CV should present.
           </p>
-          <a href="#" class="btn">Read More</a>
         </div>
+      </section>
 
-        <div class="services-box">
-          <i class="fa-solid fa-palette"></i>
-          <h1>UI/UX Designing</h1>
+      <section class="section" id="work">
+        <p class="section-label">02 / Work</p>
+        <div class="section-content">
+          <h2>Experience timeline.</h2>
+          <div class="list">
+            <article>
+              <span>Current</span>
+              <p>Add your current role, responsibility, or business focus here.</p>
+            </article>
+            <article>
+              <span>Previous</span>
+              <p>Add earlier experience, project ownership, or achievements here.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <p class="section-label">03 / Projects</p>
+        <div class="section-content">
+          <h2>Selected projects.</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>Project One</h3>
+              <p>Short description of the project, stack, and outcome.</p>
+            </article>
+            <article class="card">
+              <h3>Project Two</h3>
+              <p>Short description of the project, stack, and outcome.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <p class="section-label">04 / Contact</p>
+        <div class="section-content">
+          <h2>Contact details.</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            atque numquam
+            Add email, phone, LinkedIn, GitHub, or any preferred contact channel.
           </p>
-          <a href="#" class="btn">Read More</a>
         </div>
+      </section>
+    </main>
 
-        <div class="services-box">
-          <i class="fa-brands fa-android"></i>
-          <h1>App Development</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            atque numquam
-          </p>
-          <a href="#" class="btn">Read More</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTOFOLIO SECTION DESIGN -->
-    <section class="portfolio" id="portfolio">
-      <h2 class="heading">Latest <span>Projects</span></h2>
-
-      <div class="portofolio-container">
-        <div class="portofolio-box">
-          <img src="./img/1.jpg" alt="" />
-          <div class="portofolio-layer">
-            <h4>Web Design</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-              possimus vero laborum! Architecto, officia.
-            </p>
-            <i class="fa-solid fa-up-right-from-square"></i>
-          </div>
-        </div>
-
-        <div class="portofolio-box">
-          <img src="./img/2.jpg" alt="" />
-          <div class="portofolio-layer">
-            <h4>Web Design</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-              possimus vero laborum! Architecto, officia.
-            </p>
-            <i class="fa-solid fa-up-right-from-square"></i>
-          </div>
-        </div>
-
-        <div class="portofolio-box">
-          <img src="./img/3.jpg" alt="" />
-          <div class="portofolio-layer">
-            <h4>Web Design</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-              possimus vero laborum! Architecto, officia.
-            </p>
-            <i class="fa-solid fa-up-right-from-square"></i>
-          </div>
-        </div>
-
-        <div class="portofolio-box">
-          <img src="./img/4.jpg" alt="" />
-          <div class="portofolio-layer">
-            <h4>Web Design</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-              possimus vero laborum! Architecto, officia.
-            </p>
-            <i class="fa-solid fa-up-right-from-square"></i>
-          </div>
-        </div>
-
-        <div class="portofolio-box">
-          <img src="./img/5.jpg" alt="" />
-          <div class="portofolio-layer">
-            <h4>Web Design</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-              possimus vero laborum! Architecto, officia.
-            </p>
-            <i class="fa-solid fa-up-right-from-square"></i>
-          </div>
-        </div>
-
-        <div class="portofolio-box">
-          <img src="./img/6.jpg" alt="" />
-          <div class="portofolio-layer">
-            <h4>Web Design</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-              possimus vero laborum! Architecto, officia.
-            </p>
-            <i class="fa-solid fa-up-right-from-square"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION DESIGN -->
-    <section class="contact" id="contact">
-      <h2 class="heading">Contach<span>Me</span></h2>
-      <form action="#">
-        <div class="input-box">
-          <input type="text" placeholder="full Name" />
-          <input type="email" placeholder="Email Address" />
-        </div>
-
-        <div class="input-box">
-          <input type="number" placeholder="Mobile Number" />
-          <input type="email" placeholder="Emai Subject" />
-        </div>
-
-        <textarea
-          name=""
-          id=""
-          cols="30"
-          rows="10"
-          placeholder="Your Message"
-        ></textarea>
-        <input type="submit" value="send Message" class="btn" />
-      </form>
-    </section>
-
-    <!-- FOOTER DESIGN -->
     <footer class="footer">
-      <div class="footer-text">
-        <p>Copyright &copy; 2024 by ArdiOkdianto | All Rights Reserved.</p>
-      </div>
-      <div class="footer-iconTop">
-        <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
-      </div>
+      <span>© <span data-year></span> Ardi Okdianto</span>
+      <a href="#home">Back to top</a>
     </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- MAIN JS -->
     <script src="./script.js"></script>
   </body>
 </html>

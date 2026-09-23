@@ -1,56 +1,43 @@
-let menuIcon = document.querySelector("#menu-icon");
-let navMenu = document.querySelector(".navbar");
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-link");
+const sections = document.querySelectorAll("main section[id]");
+const year = document.querySelector("[data-year]");
 
-menuIcon.onclick = () => {
-  menuIcon.classList.toggle("fa-x");
-  navMenu.classList.toggle("active");
-};
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
 
-let sections = document.querySelectorAll("section");
-let navLinks = document.querySelectorAll("header nav a");
-
-window.onscroll = () => {
-  sections.forEach((sec) => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute("id");
-
-    if (top >= offset && top < offset + height) {
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-        document
-          .querySelector('header nav a[href="#' + id + '"]')
-          .classList.add("active");
-      });
-    }
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
   });
+}
 
-  let header = document.querySelector("header");
-  header.classList.toggle("sticky", window.scrollY > 100);
-
-  menuIcon.classList.remove("fa-x");
-  navMenu.classList.remove("active");
-};
-
-ScrollReveal({
-  distance: "80px",
-  duration: 2000,
-  delay: 200,
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks?.classList.remove("open");
+    navToggle?.setAttribute("aria-expanded", "false");
+  });
 });
 
-ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
-ScrollReveal().reveal(
-  ".home-img, .services-container, .portfolio-box, .contact form",
-  { origin: "bottom" }
-);
-ScrollReveal().reveal(".home-content h1, .    -img", { origin: "left" });
-ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
-const typed = new Typed(".multiple-text", {
-  strings: ["Back-end Developer", "Web Designer", "Youtuber"],
-  typeSpeed: 70,
-  backSpeed: 70,
-  backDelay: 1000,
-  loop: true,
-});
+        links.forEach((link) => {
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${entry.target.id}`,
+          );
+        });
+      });
+    },
+    { rootMargin: "-35% 0px -55% 0px" },
+  );
+
+  sections.forEach((section) => observer.observe(section));
+}
