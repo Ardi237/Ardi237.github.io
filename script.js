@@ -4,6 +4,7 @@ const links = document.querySelectorAll(".nav-link");
 const sections = document.querySelectorAll("main section[id]");
 const panels = document.querySelectorAll(".slide-section");
 const year = document.querySelector("[data-year]");
+const backToTop = document.querySelector(".back-to-top");
 
 const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 
@@ -66,18 +67,24 @@ const updateSideMotion = () => {
   });
 };
 
+const updateBackToTopVisibility = () => {
+  backToTop?.classList.toggle("visible", window.scrollY > 24);
+};
+
 let ticking = false;
 
-const requestSideMotionUpdate = () => {
+const requestScrollUpdate = () => {
   if (ticking) return;
 
   ticking = true;
   window.requestAnimationFrame(() => {
     updateSideMotion();
+    updateBackToTopVisibility();
     ticking = false;
   });
 };
 
-window.addEventListener("scroll", requestSideMotionUpdate, { passive: true });
-window.addEventListener("resize", requestSideMotionUpdate);
+window.addEventListener("scroll", requestScrollUpdate, { passive: true });
+window.addEventListener("resize", requestScrollUpdate);
 updateSideMotion();
+updateBackToTopVisibility();
